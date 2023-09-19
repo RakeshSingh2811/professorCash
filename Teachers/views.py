@@ -39,3 +39,8 @@ def addSubject(request):
         'heading': "Add Subject"
     }
     return render(request, "Teachers/index.html", context)
+
+
+def viewTopics(request):
+    topics = Topic.objects.all()
+    return render(request, "Teachers/list.html", {"topics": topics})

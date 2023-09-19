@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Uploader</title>
+</head>
+
+<body>
+    <h1>All topics</h1>
+    <table border="1">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <th>Video</th>
+                <th>Description</th>
+                <th>Super Topic</th>
+                <th>Subject</th>
+            </tr>
+
+            <h1>{{topics.length}}</h1>
+
+            {% for topic in topics %}
+            <tr>
+                <td>{{topic}}</td>
+                <td><img src="/media/{{topic.video}}" width="50px" alt="{{topic}}"></td>
+                <td>{{topic.description}}</td>
+                <td>{{topic.supTopic}}</td>
+                <td>{{topic.subject}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
