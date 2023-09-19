@@ -11,7 +11,8 @@ def addTopic(request):
     if form.is_valid():
         form.save()
     context = {
-        'form': form
+        'form': form,
+        'heading': "Add Topic"
     }
     return render(request, "Teachers/index.html", context)
 
@@ -22,7 +23,8 @@ def addSupTopic(request):
     if form.is_valid():
         form.save()
     context = {
-        "form": form
+        "form": form,
+        'heading': "Add Super Topic"
     }
     return render(request, "Teachers/index.html", context)
 
@@ -33,6 +35,7 @@ def addSubject(request):
     if form.is_valid():
         form.save()
     context = {
-        "form": form
+        "form": form,
+        'heading': "Add Subject"
     }
     return render(request, "Teachers/index.html", context)
