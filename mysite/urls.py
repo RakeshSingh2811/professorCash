@@ -22,5 +22,5 @@ urlpatterns = [
     path("", include("Teachers.urls")),
     path("admin/", admin.site.urls),
     path('media/<path>', serve, {'document_root': settings.MEDIA_ROOT}),
-    path('static/<path>)$', serve, {'document_root': settings.STATIC_ROOT}),
+    path('static/<path>', serve, {'document_root': settings.STATIC_ROOT}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
